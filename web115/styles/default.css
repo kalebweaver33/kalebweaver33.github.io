@@ -16,6 +16,9 @@ a {
 a:hover {
     color: #003366;
 }
+.label {
+    color: #cc6600;
+}
 img {
     max-width: 300px;
     height: auto;
