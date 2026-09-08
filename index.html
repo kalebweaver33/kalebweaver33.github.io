@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaleb Weaver | Home</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,8 +19,20 @@
             text-align: center;
             margin-bottom: 30px;
         }
+        header h1,
+        main h2 {
+            font-family: Georgia, serif;
+        }
+        nav a {
+            margin: 0 5px;
+        }
         main {
             margin-bottom: 30px;
+        }
+        main img {
+            max-width: 160px;
+            display: block;
+            margin: 15px auto;
         }
         footer {
             text-align: center;
@@ -30,24 +42,33 @@
         a {
             color: #0645ad;
         }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+        }
     </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
     <h1>Kaleb Weaver</h1>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="web115/">WEB115 Course Site</a>
+    </nav>
+    <p><em>Web development &amp; data analytics student, always building something new.</em></p>
 </header>
 <main>
     <h2>Home</h2>
+    <img src="images/logo.svg" alt="Kaleb Weaver monogram logo">
     <p>
         Welcome to my personal website. I am Kaleb Weaver, an Information Technology
         student interested in web development, programming, and technology.
     </p>
     <p>
-        You can learn more about me by reading my
-        <a href="web115/introduction.html">introduction</a>.
-    </p>
-    <p>
-        <a href="web115/">Click here to visit my WEB115 course website.</a>
+        Visit my WEB115 course website, linked above, to see my coursework,
+        introduction, and course contract.
     </p>
 </main>
 <footer>
