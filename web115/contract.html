@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
 ```
-<div id="header"></div>
+<include src="components/header.html"></include>
 
 <main>
-    <h2>Course Contract</h2>
+    <h2>Contract</h2>
 
     <figure>
         <img
@@ -39,26 +38,13 @@
     </p>
 
     <p>
-        <em>Signed: Kaleb J. Weaver, October 6, 2026</em>
+        Signed <em>Kaleb J. Weaver, October 6, 2026</em>
     </p>
 </main>
 
-<div id="footer"></div>
+<include src="components/footer.html"></include>
 
-<script>
-    fetch("components/header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-        });
-
-    fetch("components/footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-        });
-</script>
-
+<script src="https://htmlinclude.com/htmlinclude.js"></script>
 <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 ```
 
