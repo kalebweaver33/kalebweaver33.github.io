@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,22 +9,40 @@
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-    <include src="components/header.html"></include>
+```
+<div id="header"></div>
 
-    <main>
-        <h2>Home</h2>
-        <h6 class="label">Kaleb 'KJ' Weaver | Krafty Weasel</h6>
-        
-        <p>
-            Welcome to my WEB115 course website. Use the navigation above to explore my course contract, introduction, and assignments.
-        </p>
-    </main>
+<main>
+    <h2>Home</h2>
 
-    <include src="components/footer.html"></include>
+    <h6 class="label">Kaleb 'KJ' Weaver | Krafty Weasel</h6>
 
-    <script src="https://htmlinclude.com/htmlinclude.js"></script>
-    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <p>
+        Welcome to my WEB115 course website. Use the navigation above to explore my course contract, introduction, and assignments.
+    </p>
+</main>
+
+<div id="footer"></div>
+
+<script>
+    fetch("components/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        });
+
+    fetch("components/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+</script>
+
+<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+```
+
 </body>
 </html>
