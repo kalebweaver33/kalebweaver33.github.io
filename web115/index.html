@@ -1,33 +1,37 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kaleb J. Weaver's Krafty Weasel ✦ WEB115 ✦ Home</title>
+
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="stylesheet" href="styles/default.css">
+
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-```
-<include src="components/header.html"></include>
+    <!-- divs used for scripting -->
+    <div data-include="components/header.html"></div>
 
-<main>
-    <h2>Home</h2>
-    <h6 class="label">Kaleb 'KJ' Weaver | Krafty Weasel</h6>
+    <main>
+        <h2>Home</h2>
+        <h6 class="label">Kaleb 'KJ' Weaver | Krafty Weasel</h6>
 
-    <p>
-        Welcome to my WEB115 course website. Use the navigation above to explore my course contract, introduction, and assignments.
-    </p>
-</main>
+        <p>
+            Welcome to my WEB115 course website. Use the navigation above to explore my course contract, introduction, and assignments.
+        </p>
+    </main>
 
-<include src="components/footer.html"></include>
+    <div data-include="components/footer.html"></div>
 
-<script src="https://htmlinclude.com/htmlinclude.js"></script>
-<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
-```
+    <!-- Load header and footer using JavaScript -->
+    <script src="scripts/includes.js"></script>
 
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" data-mode="course" defer></script>
 </body>
 </html>
+```
