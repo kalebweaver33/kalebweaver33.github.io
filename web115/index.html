@@ -10,38 +10,20 @@
 </head>
 <body>
 
-    <header>
-        <h1>Kaleb J. Weaver's Krafty Weasel ✦ WEB115</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="introduction.html">Introduction</a> |
-            <a href="contract.html">Contract</a>
-        </nav>
-        <p><em>Web development &amp; data analytics student, always building something new.</em></p>
-    </header>
+    <div include-html="components/header.html"></div>
 
     <main>
         <h2>Home</h2>
-        <p>Welcome to my WEB115 course home page! Use the navigation above to check out my intro, contract, and about page.</p>
-        <figure>
-            <img src="images/kaleb-in-house.jpg" alt="Kaleb wearing a black cap and dark green T-shirt in front of a light purple wall">
-            <figcaption>Krafty Weasel Web Works</figcaption>
-        </figure>
+        <h6 class="label">Kaleb 'KJ' Weaver | Krafty Weasel</h6>
+        
+        <p>
+            Welcome to my WEB115 course site. Use the navigation above to explore my assignments, course contract, and about page.
+        </p>
     </main>
 
-    <footer>
-        <!-- Class "profile-links" lays the footer links out in one horizontal row. A class is needed because only this list should be styled that way. -->
-        <ul class="profile-links">
-            <li><a href="https://kalebweaver33.github.io/">GitHub.io</a></li>
-            <li><a href="https://github.com/kalebweaver33">GitHub</a></li>
-            <li><a href="https://www.freecodecamp.org/kalebweaver321">freeCodeCamp</a></li>
-            <li><a href="https://www.codecademy.com/profiles/code6274424796">Codecademy</a></li>
-            <li><a href="https://www.linkedin.com/in/kaleb-weaver-752ab2420/">LinkedIn</a></li>
-        </ul>
-        <p>Page built by Krafty Weasel Web Works</p>
-    </footer>
+    <div include-html="components/footer.html"></div>
 
+    <script src="https://htmlinclude.com/htmlinclude.js"></script>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
