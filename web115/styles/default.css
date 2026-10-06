@@ -42,3 +42,18 @@ blockquote {
     list-style: none;
     padding: 0;
 }
+h1, h2, h3, h6 {
+    font-family: Georgia, serif;
+}
+h6 {
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    h6 {
+        font-size: 1.2rem;
+    }
+}
