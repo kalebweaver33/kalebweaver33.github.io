@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,48 +9,103 @@
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-    <include src="components/header.html"></include>
+```
+<div id="header"></div>
 
-    <main>
-        <h2>Introduction</h2>
-        <h6 class="label">Kaleb 'KJ' Weaver | Krafty Weasel</h6>
-        
-        <figure>
-            <img src="images/kaleb-in-house.jpg" alt="Kaleb wearing a black cap and dark green T-shirt in front of a light purple wall">
-            <figcaption>Wassup</figcaption>
-        </figure>
+<main>
+    <h2>Introduction</h2>
 
-        <p>
-            Hello, my name is Kaleb. I am currently dreading the summer heat right now, but I really just stay on the game with friends or go out and watch movies with my friends right now I'm big into COD Zombies easter eggs.
-        </p>
+    <h6 class="label">Kaleb 'KJ' Weaver | Krafty Weasel</h6>
 
-        <ul>
-            <li><strong>Personal Background:</strong> I've lived in Charlotte all my life.</li>
-            <li><strong>Professional Background:</strong> I currently work at Walmart part-time.</li>
-            <li><strong>Academic Background:</strong> I decided on pursuing Web Development &amp; data analytics.</li>
-            <li><strong>Primary Work Computer:</strong> I use Asus Laptop with Windows 11.</li>
-            <li><strong>Primary Work Location:</strong> My desk in my house.</li>
-            <li><strong>Alternate Computer &amp; Location:</strong> I have plenty of computers in my home, and can visit the CPCC library.</li>
-            <li><strong>Courses I'm Taking, &amp; Why:</strong>
-                <ol>
-                    <li><strong>WEB115 - Web Markup and Scripting:</strong> Needed for program</li>
-                    <li><strong>CSC124 - Intro to Data Science Prog:</strong> Needed for program</li>
-                    <li><strong>CSC121 - Python Programming:</strong> Needed for program</li>
-                </ol>
-            </li>
-        </ul>
+    <figure>
+        <img
+            src="images/kaleb-in-house.jpg"
+            alt="Kaleb wearing a black cap and dark green T-shirt in front of a light purple wall"
+        >
+        <figcaption>Wassup</figcaption>
+    </figure>
 
-        <blockquote>
-            "Life is what happens when you're busy making other plans"<br>
-            <em>– John Lennon</em>
-        </blockquote>
-    </main>
+    <p>
+        Hello, my name is Kaleb. I am currently dreading the summer heat right now, but I really just stay on the game with friends or go out and watch movies with my friends right now I'm big into COD Zombies easter eggs.
+    </p>
 
-    <include src="components/footer.html"></include>
+    <ul>
+        <li>
+            <strong>Personal Background:</strong>
+            I've lived in Charlotte all my life.
+        </li>
 
-    <script src="https://htmlinclude.com/htmlinclude.js"></script>
-    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+        <li>
+            <strong>Professional Background:</strong>
+            I currently work at Walmart part-time.
+        </li>
+
+        <li>
+            <strong>Academic Background:</strong>
+            I decided on pursuing Web Development &amp; data analytics.
+        </li>
+
+        <li>
+            <strong>Primary Work Computer:</strong>
+            I use Asus Laptop with Windows 11.
+        </li>
+
+        <li>
+            <strong>Primary Work Location:</strong>
+            My desk in my house.
+        </li>
+
+        <li>
+            <strong>Alternate Computer &amp; Location:</strong>
+            I have plenty of computers in my home, and can visit the CPCC library.
+        </li>
+
+        <li>
+            <strong>Courses I'm Taking, &amp; Why:</strong>
+            <ol>
+                <li>
+                    <strong>WEB115 - Web Markup and Scripting:</strong>
+                    Needed for program
+                </li>
+                <li>
+                    <strong>CSC124 - Intro to Data Science Prog:</strong>
+                    Needed for program
+                </li>
+                <li>
+                    <strong>CSC121 - Python Programming:</strong>
+                    Needed for program
+                </li>
+            </ol>
+        </li>
+    </ul>
+
+    <blockquote>
+        "Life is what happens when you're busy making other plans"<br>
+        <em>– John Lennon</em>
+    </blockquote>
+</main>
+
+<div id="footer"></div>
+
+<script>
+    fetch("components/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        });
+
+    fetch("components/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+</script>
+
+<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+```
+
 </body>
 </html>
