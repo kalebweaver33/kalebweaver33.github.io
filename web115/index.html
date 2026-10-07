@@ -28,7 +28,7 @@
 
     <figure>
         <img
-            src="images/weasel_guy.jpg"
+            src="images/weasel_something.jpg"
             alt="Krafty Weasel mascot"
         >
         <figcaption>Krafty Weasel working on FizzBuzz 0.</figcaption>
@@ -108,5 +108,80 @@
         event.preventDefault();
 
         // Get the values entered by the user.
-        const firstName = firstN
+        const firstName = firstNameField.value.trim();
+        const middleInitial = middleInitialField.value.trim();
+        const lastName = lastNameField.value.trim();
 
+        // Start the full name with the first name.
+        let fullName = firstName;
+
+        // Add the middle initial and period only when one was entered.
+        if (middleInitial !== "") {
+            fullName += " " + middleInitial + ".";
+        }
+
+        // Add the last name.
+        fullName += " " + lastName;
+
+        // Replace the original greeting with the personalized greeting.
+        greeting.textContent =
+            "Welcome to Krafty Weasel Web Works, " + fullName + "!";
+
+        // Clear the Part I output before generating new lines.
+        loopOutput.innerHTML = "";
+
+        // Generate 125 identical Krafty Weasel lines.
+        for (let iCounter = 1; iCounter <= 125; iCounter++) {
+            const line = document.createElement("p");
+            line.textContent = iCounter + ") Krafty Weasel";
+            loopOutput.appendChild(line);
+        }
+
+        // Ask the user how high they want to count.
+        const countInput = prompt(
+            "How high do you want to count, " + firstName + "?"
+        );
+
+        // Convert the user's answer into a number.
+        let count = Number(countInput);
+
+        // Use 10 if the user enters an invalid number.
+        if (!Number.isInteger(count) || count < 1) {
+            count = 10;
+        }
+
+        // Clear the Part II output before generating new results.
+        parityOutput.innerHTML = "";
+
+        // Count from 1 to the number entered by the user.
+        for (let iCounter = 1; iCounter <= count; iCounter++) {
+            const line = document.createElement("p");
+
+            // Check whether the current number is even or odd.
+            if (iCounter % 2 === 0) {
+                line.textContent =
+                    iCounter + ") Krafty Weasel - the number is even";
+            } else {
+                line.textContent =
+                    iCounter + ") Krafty Weasel - the number is odd";
+            }
+
+            // Add the result to the page.
+            parityOutput.appendChild(line);
+        }
+    });
+</script>
+
+<!-- Vicunadator standards-check script -->
+<script
+    src="https://divonbriesen.github.io/teaching/tools/standards-check.js"
+    data-mode="course"
+    defer
+></script>
+
+<!-- HTMLInclude script used to load the shared header and footer -->
+<script src="scripts/HTMLInclude.min.js"></script>
+
+
+</body>
+</html>
