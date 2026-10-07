@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaleb J. Weaver's Krafty Weasel ✦ WEB115 ✦ Home</title>
+    <title>Kaleb J. Weaver's Krafty Weasel ✦ WEB115 ✦ FizzBuzz 0</title>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="stylesheet" href="styles/default.css">
 
 
-<!-- Validation -->
+<!-- Accumulus cloud script -->
 <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
 
@@ -21,33 +21,92 @@
 <div data-include="components/header.html"></div>
 
 <main>
-    <h2>Home</h2>
+    <h2>FizzBuzz 0</h2>
+
+    <!-- h3 used to display the JavaScript-updated welcome message -->
+    <h3 id="greeting">Welcome to Krafty Weasel Web Works!</h3>
 
     <figure>
         <img
-            src="images/kaleb-in-house.jpg"
-            alt="Kaleb J. Weaver in his home office"
+            src="images/weasel_guy.jpg"
+            alt="Krafty Weasel mascot"
         >
-        <figcaption>Welcome to my WEB115 course website.</figcaption>
+        <figcaption>Krafty Weasel working on FizzBuzz 0.</figcaption>
     </figure>
 
-    <p>
-        Welcome to my WEB115 course website. Use the navigation above to explore my course contract, introduction, and assignments.
-    </p>
+    <!-- form used to collect the user's first name, middle initial, and last name -->
+    <form id="name_form">
+        <p>
+            <label for="first_name">First Name:</label>
+            <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder="Enter your first name here"
+                required
+            >
+        </p>
 
-    <p>
-        WEB115 is Web Markup and Scripting. I am taking this course as part of my program and am building this site to document my work throughout the semester.
-    </p>
+        <p>
+            <label for="middle_initial">Middle Initial:</label>
+            <input
+                type="text"
+                id="middle_initial"
+                name="middle_initial"
+                placeholder="Optional"
+                maxlength="1"
+                pattern="[A-Za-z]"
+            >
+        </p>
+
+        <p>
+            <label for="last_name">Last Name:</label>
+            <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                placeholder="Enter your last name here"
+                required
+            >
+        </p>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <section>
+        <h3>Part I: Krafty Weasel Loop</h3>
+
+        <!-- div used as a container for the 125 JavaScript-generated lines -->
+        <div id="loop_output"></div>
+    </section>
+
+    <section>
+        <h3>Part II: Even or Odd</h3>
+
+        <!-- div used as a container for the JavaScript-generated even and odd results -->
+        <div id="parity_output"></div>
+    </section>
 </main>
 
 <div data-include="components/footer.html"></div>
 
-<!-- HTMLInclude -->
-<script src="scripts/HTMLInclude.min.js"></script>
+<script>
+    // Get the form and input fields from the page.
+    const nameForm = document.getElementById("name_form");
+    const firstNameField = document.getElementById("first_name");
+    const middleInitialField = document.getElementById("middle_initial");
+    const lastNameField = document.getElementById("last_name");
 
-<!-- Validation -->
-<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" data-mode="course" defer></script>
+    // Get the greeting and output containers from the page.
+    const greeting = document.getElementById("greeting");
+    const loopOutput = document.getElementById("loop_output");
+    const parityOutput = document.getElementById("parity_output");
 
+    // Run the following instructions when the form is submitted.
+    nameForm.addEventListener("submit", function(event) {
+        // Prevent the form from refreshing the page.
+        event.preventDefault();
 
-</body>
-</html>
+        // Get the values entered by the user.
+        const firstName = firstN
+
