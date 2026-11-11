@@ -73,7 +73,7 @@ blockquote {
     width: 3rem;
     height: 1rem;
     vertical-align: middle;
-    border: 1px solid #3a3a3a;
+    outline: 1px solid #3a3a3a;
 }
 
 /* sw-* classes set each swatch fill to match the color listed beside it */
