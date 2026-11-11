@@ -63,7 +63,6 @@ blockquote {
 /* tagline = italic accent-colored tagline on the brand guide */
 .tagline {
     font-style: italic;
-    font-size: 1.25em;
     color: #8f4700;
 }
 
