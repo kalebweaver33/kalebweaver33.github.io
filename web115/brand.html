@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krafty Weasel - Brand Guide</title>
+    <title>Kaleb J. Weaver's Krafty Weasel ✦ WEB115 | Brand Guide</title>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="stylesheet" href="styles/default.css">
 
@@ -13,39 +13,61 @@
 
 <body>
 
+<!-- Divs: the data-include divs are replaced by the shared header and footer.
+     Classes: tagline = italic accent-colored tagline; logo-row = centered row holding the wordmark and icon;
+     swatch = small color box; sw-* = fill color for each swatch;
+     font-heading-sample and font-body-sample = font examples.
+     Spans: each span draws one color box next to its color description. -->
 <div data-include="components/header.html"></div>
 
 <main>
     <h2>Brand Guide</h2>
 
-    <figure>
-        <img src="images/Weasel-768x432.jpg" alt="Krafty Weasel mascot">
-        <figcaption>The Krafty Weasel mascot.</figcaption>
-    </figure>
-
-    <p style="font-style: italic; font-size: 1.25em; color: #8f4700;">"Crafty code with a little mischief."</p>
+    <p class="tagline">"Crafty code with a little mischief."</p>
 
     <section>
         <h3>Concept and Mission</h3>
-        <p>Krafty Weasel Web Works is a playful freelance web studio that builds clean, handcrafted websites with personality. Every project is made with care, a bit of mischief, and a focus on making the web more fun to use.</p>
+        <p>Krafty Weasel Web Works is my freelance web studio. I build clean, handmade websites that have some personality. I put care into every project and add a little mischief, because I want websites to be more fun to use.</p>
+    </section>
+
+    <section>
+        <h3>Mascot</h3>
+        <figure>
+            <img src="images/krafty-weasel-mascot.jpg" alt="Krafty Weasel mascot">
+            <figcaption>My Krafty Weasel mascot.</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h3>Logo and Icon</h3>
+        <div class="logo-row">
+            <figure>
+                <img src="images/krafty-weasel-wordmark.svg" alt="Krafty Weasel Web Works wordmark">
+                <figcaption>My wordmark. I use it when there is room for the full name.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/krafty-weasel-icon.svg" alt="Krafty Weasel KW icon">
+                <figcaption>My icon. I use it when space is tight.</figcaption>
+            </figure>
+        </div>
     </section>
 
     <section>
         <h3>Colors</h3>
         <ul>
-            <li><span style="background-color: #f4ecd8; border: 1px solid #3a3a3a;">&nbsp;&nbsp;&nbsp;&nbsp;</span> Background: #f4ecd8, used for the page background</li>
-            <li><span style="background-color: #3a3a3a;">&nbsp;&nbsp;&nbsp;&nbsp;</span> Text: #3a3a3a, used for body text</li>
-            <li><span style="background-color: #333333;">&nbsp;&nbsp;&nbsp;&nbsp;</span> Main heading (h1): #333333</li>
-            <li><span style="background-color: #444444;">&nbsp;&nbsp;&nbsp;&nbsp;</span> Page heading (h2): #444444</li>
-            <li><span style="background-color: #0066cc;">&nbsp;&nbsp;&nbsp;&nbsp;</span> Links: #0066cc, used for all links</li>
-            <li><span style="background-color: #8f4700;">&nbsp;&nbsp;&nbsp;&nbsp;</span> Accent: #8f4700, used for labels and the tagline</li>
+            <li><span class="swatch sw-bg" aria-hidden="true"></span> <strong>Cream Paper</strong> #f4ecd8 (background): I use it for the page background on every page.</li>
+            <li><span class="swatch sw-text" aria-hidden="true"></span> <strong>Charcoal</strong> #3a3a3a (text): I use it for all body text.</li>
+            <li><span class="swatch sw-h1" aria-hidden="true"></span> <strong>Graphite</strong> #333333 (main heading): I use it for the h1 site name in the header.</li>
+            <li><span class="swatch sw-h2" aria-hidden="true"></span> <strong>Slate</strong> #444444 (page heading): I use it for the h2 page name.</li>
+            <li><span class="swatch sw-link" aria-hidden="true"></span> <strong>Rust</strong> #7a4100 (links): I use it for every link, including visited links.</li>
+            <li><span class="swatch sw-accent" aria-hidden="true"></span> <strong>Burnt Orange</strong> #8f4700 (accent): I use it for labels and the tagline.</li>
         </ul>
     </section>
 
     <section>
         <h3>Fonts</h3>
-        <p style="font-family: Georgia, serif; font-size: 1.5em;">Heading font: Georgia. This line is an example.</p>
-        <p>Body font: Arial. This line is an example.</p>
+        <p class="font-heading-sample">Georgia: I use it for all my headings. This line is an example.</p>
+        <p class="font-body-sample">Arial: I use it for body text, navigation, captions, and the footer. This line is an example.</p>
     </section>
 
     <section>
