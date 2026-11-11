@@ -84,4 +84,38 @@ blockquote {
 /* sw-* classes set each swatch fill to match the color listed beside it */
 .sw-bg { background-color: #f4ecd8; }
 .sw-text { background-color: #3a3a3a; }
-.sw-h1 { background-color:
+.sw-h1 { background-color: #333333; }
+.sw-h2 { background-color: #444444; }
+.sw-link { background-color: #7a4100; }
+.sw-accent { background-color: #8f4700; }
+
+/* logo-row = centered row holding the wordmark and icon side by side */
+.logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+/* wordmark needs more room than the general 300px image limit */
+.logo-row img {
+    max-width: 100%;
+}
+
+/* font-heading-sample = live example of the heading font */
+.font-heading-sample {
+    font-family: Georgia, serif;
+    font-size: 1.5em;
+}
+
+/* font-body-sample = live example of the body font */
+.font-body-sample {
+    font-family: Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+}
