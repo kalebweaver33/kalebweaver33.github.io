@@ -42,18 +42,27 @@ img {
     height: auto;
 }
 
-/* header img = logo floated left so it doesn't push the h1 or nav up or down */
-header img {
-    max-width: 60px;
-    float: left;
-    margin-right: 1rem;
+/* header = positioning context so the logo can sit to the left of the h1 */
+header {
+    position: relative;
 }
 
-/* header::after = clears the float so the page content starts below the header */
-header::after {
-    content: "";
+/* header h1 = left padding leaves room for the logo */
+header h1 {
+    padding-left: 4.5rem;
+}
+
+/* logo-link = logo placed to the left of the h1, inside the page margins */
+header .logo-link {
+    position: absolute;
+    top: 1.25rem;
+    left: 0;
+}
+
+/* header img = small version of the KW logo in the header */
+header img {
+    max-width: 60px;
     display: block;
-    clear: both;
 }
 
 figure {
