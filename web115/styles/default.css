@@ -115,6 +115,28 @@ blockquote {
     font-family: Arial, sans-serif;
 }
 
+/* tables = bordered, fixed-width columns so cells stay balanced */
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+caption {
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+th,
+td {
+    border: 1px solid #3a3a3a;
+    padding: 0.5em;
+    text-align: left;
+    vertical-align: top;
+}
+col:nth-child(1) { width: 16%; }
+col:nth-child(2) { width: 26%; }
+col:nth-child(3) { width: 14%; }
+col:nth-child(4) { width: 44%; }
+
 @media (max-width: 600px) {
     body {
         padding: 15px;
