@@ -42,27 +42,30 @@ img {
     height: auto;
 }
 
-/* header = positioning context so the logo can sit to the left of the h1 */
+/* header = two-column grid: logo on the left, title beside it, nav and tagline below */
 header {
-    position: relative;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 1rem;
+    align-items: center;
 }
 
-/* header h1 = left padding leaves room for the logo */
-header h1 {
-    padding-left: 4.5rem;
-}
-
-/* logo-link = logo placed to the left of the h1, inside the page margins */
+/* logo-link = logo in the first column of the first row, to the left of the title */
 header .logo-link {
-    position: absolute;
-    top: 1.25rem;
-    left: 0;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 /* header img = small version of the KW logo in the header */
 header img {
     max-width: 60px;
     display: block;
+}
+
+/* nav and tagline = span the full header width under the logo and title */
+header nav,
+header .tagline {
+    grid-column: 1 / -1;
 }
 
 figure {
