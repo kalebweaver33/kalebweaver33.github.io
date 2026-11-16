@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaleb J. Weaver's Krafty Weasel ✦ WEB115 ✦ FizzBuzz 4</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+
+
+<main>
+    <h2>FizzBuzz 4</h2>
+
+    <!-- h3 used to display the JavaScript-updated welcome message -->
+    <h3 id="greeting">Welcome to Krafty Weasel Web Works!</h3>
+
+    <figure>
+        <img
+            src="images/krafty-weasel-mascot.jpg"
+            alt="Krafty Weasel mascot"
+        >
+        <figcaption>Krafty Weasel working on FizzBuzz 4.</figcaption>
+    </figure>
+
+    <p>
+        Fill in your name, choose three numbers and a word for each, and pick how high to count. Then press Start FizzBuzz. Each number in the list is checked against your three divisors. If it divides evenly by one or more of them, you get those words. If it divides by none of them, you get the "no match" word, which is blank by default.
+    </p>
+
+    <!-- form used to collect the name, divisors, words, no-match word, and total -->
+    <form id="name_form">
+        <h3>Your Name</h3>
+
+        <p>
+            <label for="first_name">First Name:</label>
+            <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder="Enter your first name here"
+                required
+            >
+        </p>
+
+        <p>
+            <label for="middle_initial">Middle Initial:</label>
+            <input
+                type="text"
+                id="middle_initial"
+                name="middle_initial"
+                placeholder="Optional"
+                maxlength="1"
+                pattern="[A-Za-z]"
+            >
+        </p>
+
+        <p>
+            <label for="last_name">Last Name:</label>
+            <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                placeholder="Enter your last name here"
+                required
+            >
+        </p>
+
+        <h3>Divisors and Words</h3>
+        <p>
+            Enter a whole number from 1 up in each number box, and one word (no spaces) for it to print.
+        </p>
+
+        <p>
+            <label for="number_1">Divisor 1:</label>
+            <input
+                type="number"
+                id="number_1"
+                name="number_1"
+                value="3"
+                min="1"
+                step="1"
+                required
+            >
+            <label for="word_1">Word 1:</label>
+            <input
+                type="text"
+                id="word_1"
+                name="word_1"
+                value="Weasel"
+                pattern="\S+"
+                title="One word, no spaces"
+                required
+            >
+        </p>
+
+        <p>
+            <label for="number_2">Divisor 2:</label>
+            <input
+                type="number"
+                id="number_2"
+                name="number_2"
+                value="5"
+                min="1"
+                step="1"
+                required
+            >
+            <label for="word_2">Word 2:</label>
+            <input
+                type="text"
+                id="word_2"
+                name="word_2"
+                value="Krafty"
+                pattern="\S+"
+                title="One word, no spaces"
+                required
+            >
+        </p>
+
+        <p>
+            <label for="number_3">Divisor 3:</label>
+            <input
+                type="number"
+                id="number_3"
+                name="number_3"
+                value="7"
+                min="1"
+                step="1"
+                required
+            >
+            <label for="word_3">Word 3:</label>
+            <input
+                type="text"
+                id="word_3"
+                name="word_3"
+                value="BANG!"
+                pattern="\S+"
+                title="One word, no spaces"
+                required
+            >
+        </p>
+
+        <h3>No Match and Total</h3>
+
+        <p>
+            <label for="word_none">Word for numbers with no match:</label>
+            <input
+                type="text"
+                id="word_none"
+                name="word_none"
+                placeholder="Blank by default"
+                pattern="\S*"
+                title="One word, no spaces, or leave blank"
+            >
+        </p>
+
+        <p>
+            <label for="total">Count from 1 up to:</label>
+            <input
+                type="number"
+                id="total"
+                name="total"
+                value="125"
+                min="1"
+                step="1"
+                required
+            >
+        </p>
+
+        <button type="submit">Start FizzBuzz</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <section>
+        <h3>Krafty Weasel FizzBuzz</h3>
+
+        <!-- div used as a container for the JavaScript-generated FizzBuzz list -->
+        <div id="loop_output"></div>
+    </section>
+</main>
+
+<div data-include="components/footer.html"></div>
+
+<script src="scripts/HTMLInclude.min.js"></script>
+
+<script src="scripts/fizzbuzz4.js"></script>
+
+<script
+    src="https://divonbriesen.github.io/teaching/tools/standards-check.js"
+    data-mode="course"
+    defer
+></script>
+
+
+</body>
+</html>
