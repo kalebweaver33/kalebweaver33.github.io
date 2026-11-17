@@ -17,7 +17,10 @@ h2 {
 h3 {
     font-family: Georgia, serif;
 }
-h6 {
+
+/* label = accent-colored, centered Georgia text for page labels */
+.label {
+    color: #8f4700;
     font-family: Georgia, serif;
     font-size: 1.5rem;
     white-space: nowrap;
@@ -33,10 +36,6 @@ a:hover {
     color: #3a3a3a;
 }
 
-/* label = accent-colored text for labels */
-.label {
-    color: #8f4700;
-}
 img {
     max-width: 300px;
     height: auto;
