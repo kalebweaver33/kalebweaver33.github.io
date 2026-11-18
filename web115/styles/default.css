@@ -93,9 +93,13 @@ blockquote {
     padding: 0;
 }
 
-/* tagline = italic accent-colored tagline on the brand guide */
+/* footer-line = centered line holding the tagline and the page credit */
+.footer-line {
+    text-align: center;
+}
+
+/* tagline = accent-colored tagline (quotes only, no italics) */
 .tagline {
-    font-style: italic;
     color: #8f4700;
 }
 
