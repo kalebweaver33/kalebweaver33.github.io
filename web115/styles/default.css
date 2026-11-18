@@ -13,6 +13,7 @@ h1 {
 h2 {
     color: #444;
     font-family: Georgia, serif;
+    text-align: center;
 }
 h3 {
     font-family: Georgia, serif;
@@ -47,10 +48,10 @@ img {
     height: auto;
 }
 
-/* header = two-column grid: logo on the left, title beside it, nav and tagline below */
+/* header = three-column grid: logo on the left, centered title in the middle, empty column on the right to balance it, nav below */
 header {
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 60px 1fr 60px;
     column-gap: 1rem;
     align-items: center;
 }
@@ -61,16 +62,21 @@ header .logo-link {
     grid-row: 1;
 }
 
+/* header h1 = centered title */
+header h1 {
+    text-align: center;
+}
+
 /* header img = small version of the KW logo in the header */
 header img {
     max-width: 60px;
     display: block;
 }
 
-/* nav and tagline = span the full header width under the logo and title */
-header nav,
-header .tagline {
+/* nav = centered, spans the full header width under the logo and title */
+header nav {
     grid-column: 1 / -1;
+    text-align: center;
 }
 
 figure {
