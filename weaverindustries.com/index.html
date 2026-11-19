@@ -1,20 +1,102 @@
-<!-- components/footer.html -->
+<!DOCTYPE html>
 
-<footer>
-    <!-- class used to arrange the profile links in the footer -->
-    <ul class="profile-links">
-        <li><a href="https://kalebweaver33.github.io/">GitHub.io</a></li>
-        <li><a href="https://github.com/kalebweaver33">GitHub</a></li>
-        <li><a href="https://www.freecodecamp.org/kalebweaver321">freeCodeCamp</a></li>
-        <li><a href="https://www.codecademy.com/profiles/code6274424796">Codecademy</a></li>
-        <li><a href="https://www.linkedin.com/in/kaleb-weaver-752ab2420/">LinkedIn</a></li>
-    </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weaver Industries ✦ Kaleb Weaver</title>
 
+    <!-- Embedded stylesheet: --s is the card size, and every other size is a fraction of it so the card scales without scrolling -->
+    <style>
+        :root {
+            --s: min(440px, 88vw, 80vh);
+        }
 
-<!-- class tagline = accent-colored tagline; divider separates it from the credit -->
-<p class="footer-line">
-    <span class="tagline">"Crafty code with a little mischief"</span> | <em>Page built by <a href="../weaverindustries.com/index.html">Weaver Industries</a></em>
-</p>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
 
+        body {
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            background-color: #2f5d62;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+            background-size: 18px 18px;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #222;
+        }
 
-</footer>
+        /* card = white rounded square with a shadow so it floats above the background */
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: var(--s);
+            height: var(--s);
+            overflow: hidden;
+            border-radius: calc(var(--s) * 0.115);
+            background-color: #fff;
+            box-shadow: 0 calc(var(--s) * 0.03) calc(var(--s) * 0.09) rgba(0, 0, 0, 0.45);
+            text-align: center;
+        }
+
+        /* flowers = watercolor graphic across the top of the card */
+        .flowers {
+            display: block;
+            width: 100%;
+            height: 49%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        /* details = name and contact lines centered in the space under the flowers */
+        .details {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            margin: 0 0 calc(var(--s) * 0.015);
+            font-size: calc(var(--s) * 0.08);
+            line-height: 1.2;
+        }
+
+        p,
+        address {
+            margin: 0;
+            font-size: calc(var(--s) * 0.047);
+            font-style: normal;
+            line-height: 1.35;
+        }
+    </style>
+
+    <!-- Validation -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<main class="card">
+    <img class="flowers" src="images/flower.jpg" alt="Watercolor teal flowers">
+
+    <div class="details">
+        <h1>Kaleb Weaver</h1>
+        <p>Weaver Industries</p>
+        <address>
+            1201 Elizabeth Ave, Charlotte<br>
+            Phone: 980-488-0812<br>
+            weaverindustrites@gmail.com<br>
+            kalebweaver33.github.io
+        </address>
+    </div>
+</main>
+
+<!-- Validation -->
+<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" data-mode="course" defer></script>
+
+</body>
+</html>
