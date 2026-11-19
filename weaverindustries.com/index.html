@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weaver Industries ✦ Kaleb Weaver</title>
+    <link rel="icon" type="image/svg+xml" href="../web115/images/favicon.svg">
 
     <!-- Embedded stylesheet: --s is the card size, and every other size is a fraction of it so the card scales without scrolling -->
     <style>
@@ -22,11 +23,18 @@
             display: grid;
             place-items: center;
             overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
             background-color: #2f5d62;
             background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
             background-size: 18px 18px;
             font-family: Georgia, "Times New Roman", serif;
             color: #222;
+        }
+
+        /* links are not used on the card, but they would take the card's text color instead of blue */
+        a {
+            color: inherit;
         }
 
         /* card = white rounded square with a shadow so it floats above the background */
@@ -37,6 +45,7 @@
             height: var(--s);
             overflow: hidden;
             border-radius: calc(var(--s) * 0.115);
+            /* white on purpose: the printed card is white, and the card needs to stand out from the dark background */
             background-color: #fff;
             box-shadow: 0 calc(var(--s) * 0.03) calc(var(--s) * 0.09) rgba(0, 0, 0, 0.45);
             text-align: center;
@@ -72,6 +81,13 @@
             font-style: normal;
             line-height: 1.35;
         }
+
+        /* on small screens the background dots get a little smaller */
+        @media (max-width: 600px) {
+            body {
+                background-size: 12px 12px;
+            }
+        }
     </style>
 
     <!-- Validation -->
@@ -80,6 +96,7 @@
 
 <body>
 
+<!-- Classes: card (the main element) is the floating card, flowers is the picture, and details is a div that groups the name and contact lines so they center together. No ids are used. -->
 <main class="card">
     <img class="flowers" src="images/flowers.jpg" alt="Watercolor teal flowers">
 
@@ -94,6 +111,9 @@
         </address>
     </div>
 </main>
+
+<!-- Validation -->
+<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" data-mode="course" defer></script>
 
 </body>
 </html>
