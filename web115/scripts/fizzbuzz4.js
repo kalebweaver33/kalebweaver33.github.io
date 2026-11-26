@@ -3,13 +3,13 @@ function checkDivision(number, divisor) {
     return number % divisor === 0;
 }
 
-const nameForm = document.getElementById("name_form");
-const firstNameField = document.getElementById("first_name");
-const middleInitialField = document.getElementById("middle_initial");
-const lastNameField = document.getElementById("last_name");
+const nameForm = document.getElementById("name-form");
+const firstNameField = document.getElementById("first-name");
+const middleInitialField = document.getElementById("middle-name");
+const lastNameField = document.getElementById("last-name");
 
 const greeting = document.getElementById("greeting");
-const loopOutput = document.getElementById("loop_output");
+const loopOutput = document.getElementById("loop-output");
 
 nameForm.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -32,29 +32,30 @@ nameForm.addEventListener("submit", function(event) {
     // Divisors and their corresponding words, read from the form.
     const divisors = [
         {
-            number: parseInt(document.getElementById("number_1").value, 10),
-            word: document.getElementById("word_1").value.trim()
+            number: parseInt(document.getElementById("number-1").value, 10),
+            word: document.getElementById("word-1").value.trim()
         },
         {
-            number: parseInt(document.getElementById("number_2").value, 10),
-            word: document.getElementById("word_2").value.trim()
+            number: parseInt(document.getElementById("number-2").value, 10),
+            word: document.getElementById("word-2").value.trim()
         },
         {
-            number: parseInt(document.getElementById("number_3").value, 10),
-            word: document.getElementById("word_3").value.trim()
+            number: parseInt(document.getElementById("number-3").value, 10),
+            word: document.getElementById("word-3").value.trim()
         }
     ];
 
     // Word for numbers not divisible by any divisor (blank by default).
-    const noMatchWord = document.getElementById("word_none").value.trim();
+    const noMatchWord = document.getElementById("word-none").value.trim();
 
-    // Total number to count up to.
+    // Number to start counting from and number to count up to.
+    const start = parseInt(document.getElementById("start").value, 10);
     const total = parseInt(document.getElementById("total").value, 10);
 
     loopOutput.innerHTML = "";
 
-    // Generate the FizzBuzz list from 1 through the chosen total.
-    for (let iCounter = 1; iCounter <= total; iCounter++) {
+    // Generate the FizzBuzz list from the start number through the chosen total.
+    for (let iCounter = start; iCounter <= total; iCounter++) {
         const line = document.createElement("p");
         const results = [];
 
