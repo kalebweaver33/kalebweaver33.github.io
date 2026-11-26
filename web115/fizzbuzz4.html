@@ -29,34 +29,34 @@
         Enter your name, choose three divisors and a word for each, then press Start FizzBuzz. Numbers that divide by none of them get the no-match word, which is blank by default.
     </p>
 
-    <!-- form used to collect the name, divisors, words, no-match word, and total -->
-    <form id="name_form">
+    <!-- form used to collect the name, divisors, words, no-match word, and start and end numbers -->
+    <form id="name-form">
         <h3>Your Name</h3>
 
         <p>
-            <label for="first_name">First Name:</label>
+            <label for="first-name">First Name:</label>
             <input
                 type="text"
-                id="first_name"
+                id="first-name"
                 name="first_name"
                 placeholder="Enter your first name here"
                 required
             >
 
-            <label for="middle_initial">Middle Initial:</label>
+            <label for="middle-name">Middle Initial:</label>
             <input
                 type="text"
-                id="middle_initial"
+                id="middle-name"
                 name="middle_initial"
                 placeholder="Optional"
                 maxlength="1"
                 pattern="[A-Za-z]"
             >
 
-            <label for="last_name">Last Name:</label>
+            <label for="last-name">Last Name:</label>
             <input
                 type="text"
-                id="last_name"
+                id="last-name"
                 name="last_name"
                 placeholder="Enter your last name here"
                 required
@@ -69,20 +69,20 @@
         </p>
 
         <p>
-            <label for="number_1">Divisor 1:</label>
+            <label for="number-1">Divisor 1:</label>
             <input
                 type="number"
-                id="number_1"
+                id="number-1"
                 name="number_1"
                 value="3"
                 min="1"
                 step="1"
                 required
             >
-            <label for="word_1">Word 1:</label>
+            <label for="word-1">Word 1:</label>
             <input
                 type="text"
-                id="word_1"
+                id="word-1"
                 name="word_1"
                 value="Weasel"
                 pattern="\S+"
@@ -92,20 +92,20 @@
         </p>
 
         <p>
-            <label for="number_2">Divisor 2:</label>
+            <label for="number-2">Divisor 2:</label>
             <input
                 type="number"
-                id="number_2"
+                id="number-2"
                 name="number_2"
                 value="5"
                 min="1"
                 step="1"
                 required
             >
-            <label for="word_2">Word 2:</label>
+            <label for="word-2">Word 2:</label>
             <input
                 type="text"
-                id="word_2"
+                id="word-2"
                 name="word_2"
                 value="Krafty"
                 pattern="\S+"
@@ -115,20 +115,20 @@
         </p>
 
         <p>
-            <label for="number_3">Divisor 3:</label>
+            <label for="number-3">Divisor 3:</label>
             <input
                 type="number"
-                id="number_3"
+                id="number-3"
                 name="number_3"
                 value="7"
                 min="1"
                 step="1"
                 required
             >
-            <label for="word_3">Word 3:</label>
+            <label for="word-3">Word 3:</label>
             <input
                 type="text"
-                id="word_3"
+                id="word-3"
                 name="word_3"
                 value="BANG!"
                 pattern="\S+"
@@ -140,10 +140,10 @@
         <h3>No Match and Total</h3>
 
         <p>
-            <label for="word_none">Word for numbers with no match:</label>
+            <label for="word-none">Word for numbers with no match:</label>
             <input
                 type="text"
-                id="word_none"
+                id="word-none"
                 name="word_none"
                 placeholder="Blank by default"
                 pattern="\S*"
@@ -152,7 +152,18 @@
         </p>
 
         <p>
-            <label for="total">Count from 1 up to:</label>
+            <label for="start">Count from:</label>
+            <input
+                type="number"
+                id="start"
+                name="start"
+                value="1"
+                min="1"
+                step="1"
+                required
+            >
+
+            <label for="total">Count up to:</label>
             <input
                 type="number"
                 id="total"
@@ -175,7 +186,7 @@
         <h3 id="greeting">Welcome to Krafty Weasel Web Works!</h3>
 
         <!-- div used as a container for the JavaScript-generated FizzBuzz list -->
-        <div id="loop_output"></div>
+        <div id="loop-output"></div>
     </section>
 </main>
 
